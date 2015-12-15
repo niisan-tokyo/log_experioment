@@ -1,2 +1,3 @@
 /nbproject/private/
-/niisan-tokyo/Logexp/var/tmp/app/
+/niisan-tokyo/Logexp/var/tmp/app/*
+/niisan-tokyo/Logexp/var/log/*.log
