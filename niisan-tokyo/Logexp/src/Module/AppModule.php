@@ -1,6 +1,6 @@
 <?php
 
-namespace MyVendor\MyProject\Module;
+namespace Logexp\Module;
 
 use BEAR\Package\PackageModule;
 use Ray\Di\AbstractModule;
@@ -13,5 +13,6 @@ class AppModule extends AbstractModule
     protected function configure()
     {
         $this->install(new PackageModule);
+        
     }
 }

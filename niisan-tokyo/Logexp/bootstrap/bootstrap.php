@@ -3,7 +3,7 @@
 /**
  * @global string $context
  */
-namespace MyVendor\MyProject;
+namespace Logexp;
 
 use BEAR\Package\Bootstrap;
 use Doctrine\Common\Annotations\AnnotationRegistry;

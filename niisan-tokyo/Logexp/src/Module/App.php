@@ -1,6 +1,6 @@
 <?php
 
-namespace MyVendor\MyProject\Module;
+namespace Logexp\Module;
 
 use BEAR\Sunday\Extension\Application\AbstractApp;
 
