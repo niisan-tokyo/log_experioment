@@ -14,7 +14,7 @@ RUN curl -sS https://getcomposer.org/installer | php; mv composer.phar /usr/loca
 #install fluentd
 ADD etc/td.repo /etc/yum.repos.d/td.repo
 RUN rpm --import https://packages.treasuredata.com/GPG-KEY-td-agent; yum check-update; yes|yum install -y td-agent
-RUN chkconfig td-agent on
+RUN service td-agent start; chkconfig td-agent on
 ADD etc/td-agent.conf /etc/td-agent/td-agent.conf
 
 #build application
@@ -24,4 +24,7 @@ RUN composer install --no-dev
 
 EXPOSE 8080
 
-CMD php -S 0.0.0.0:8080 var/www/index.php
+#start script
+ADD start.sh /var/www/start.sh
+RUN chmod +x start.sh
+CMD ./start.sh
